@@ -13,6 +13,7 @@ enum PlaceTypeFilter {
   /// ADMINISTRATIVE_AREA_LEVEL_3
   CITIES,
 
+
   /// Only return results that are classified as businesses.
   ESTABLISHMENT,
 
@@ -28,7 +29,16 @@ enum PlaceTypeFilter {
   /// COUNTRY
   /// ADMINISTRATIVE_AREA_LEVEL_1
   /// ADMINISTRATIVE_AREA_LEVEL_2
-  REGIONS
+  REGIONS,
+
+  LOCALITY,
+  SUBLOCALITY,
+  POSTAL_CODE,
+  COUNTRY,
+
+  ADMINISTRATIVE_AREA_LEVEL_1,
+  ADMINISTRATIVE_AREA_LEVEL_2,
+  ADMINISTRATIVE_AREA_LEVEL_3
   ;
 
   factory PlaceTypeFilter.fromJson(String name) {
@@ -53,6 +63,20 @@ enum PlaceTypeFilter {
         return 'geocode';
       case PlaceTypeFilter.REGIONS:
         return '(regions)';
+      case PlaceTypeFilter.LOCALITY:
+        return 'locality';
+      case PlaceTypeFilter.SUBLOCALITY:
+        return 'sublocality';
+      case PlaceTypeFilter.POSTAL_CODE:
+        return 'postal_code';
+      case PlaceTypeFilter.COUNTRY:
+        return 'country';
+      case PlaceTypeFilter.ADMINISTRATIVE_AREA_LEVEL_1:
+        return 'administrative_area_level_1';
+      case PlaceTypeFilter.ADMINISTRATIVE_AREA_LEVEL_2:
+        return 'administrative_area_level_2';
+      case PlaceTypeFilter.ADMINISTRATIVE_AREA_LEVEL_3:
+        return 'administrative_area_level_3';
     }
   }
 }
