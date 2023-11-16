@@ -47,4 +47,3 @@ build/
 .fvm/
 
 # Generated dart files
-*.freezed.dart
